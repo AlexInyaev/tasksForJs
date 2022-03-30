@@ -13,7 +13,9 @@ function camelize(str) {
 
         out += arr[i];
     }
-
+    console.log(out)
 }
 
-camelize('str-rr-rrr-rrr') 
+camelize("background-color")
+camelize("list-style-image");
+camelize("-webkit-transition")
