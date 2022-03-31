@@ -1,7 +1,7 @@
 // **************************************** Задача 1 ********************************************************
 
 
-function camelize() {
+function camelizeMyVersion() {
     let str = document.querySelector('#taskArr1').value; //получаю строку из поля
     let arr = str.split(''); //разбиваю строку в массив по буквам
     let out = '';
@@ -19,6 +19,24 @@ function camelize() {
     document.querySelector('.outArr1').textContent = out;
 }
 
-document.querySelector('.btnTaskArr1').onclick = camelize;
+document.querySelector('.btnTaskArrMyVersion1').onclick = camelizeMyVersion;
 
+// -------------------------------------------------- решение из learn js ---------------------------------------
+function camelize(str) {
+    return str
+        .split('-') // разбивает 'my-long-word' на массив ['my', 'long', 'word']
+        .map(
+            // Переводит в верхний регистр первые буквы всех элементом массива за исключением первого
+            // превращает ['my', 'long', 'word'] в ['my', 'Long', 'Word']
+            (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+        )
+        .join(''); // соединяет ['my', 'Long', 'Word'] в 'myLongWord'
+}
 
+// далее код позволяет используя наше поле ввода - вывода запустить функцию из учебника
+document.querySelector('.btnTaskArr1').onclick = () => {
+    let str = document.querySelector('#taskArr1').value;
+    document.querySelector('.outArrMyVersion1').textContent = camelize(str);
+};
+
+// console.log('-webkit-transition'.split('-')) -> ['', 'webkit', 'transition']
