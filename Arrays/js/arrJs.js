@@ -21,3 +21,4 @@ function camelize() {
 
 document.querySelector('.btnTaskArr1').onclick = camelize;
 
+
