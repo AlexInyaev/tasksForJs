@@ -1,21 +1,23 @@
 // **************************************** Задача 1 ********************************************************
 
-function camelize(str) {
+
+function camelize() {
+    let str = document.querySelector('#taskArr1').value; //получаю строку из поля
     let arr = str.split(''); //разбиваю строку в массив по буквам
     let out = '';
 
     for (let i = 0; i < arr.length; i++) {
 
-        if (arr[i] == '-') {
-            out += arr[i + 1].toUpperCase();
+        if (arr[i] == '-') { //если элемент массива дефис 
+            out += arr[i + 1].toUpperCase(); //то следующий элемент должен быть заглавной буквой 
+            i++;
             continue;
         }
 
-        out += arr[i];
+        out += arr[i]; //собираем все элементы в строку
     }
-    console.log(out)
+    document.querySelector('.outArr1').textContent = out;
 }
 
-camelize("background-color")
-camelize("list-style-image");
-camelize("-webkit-transition")
+document.querySelector('.btnTaskArr1').onclick = camelize;
+
