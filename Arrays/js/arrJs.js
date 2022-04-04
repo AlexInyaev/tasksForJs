@@ -44,3 +44,9 @@ document.querySelector('.btnTaskArr1').onclick = () => {
 
 // **************************************** Задача 2 ********************************************************
 // Напишите функцию filterRange(arr, a, b), которая принимает массив arr, ищет в нём элементы между a и b и отдаёт массив этих элементов.
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+function filterRange(arr, a, b) {
+    return arr.filter((item) => a < item && item < b)
+}
+console.log(filterRange(array, 2, 5));
