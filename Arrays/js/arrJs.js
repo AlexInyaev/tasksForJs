@@ -61,3 +61,24 @@ arr.sort((a, b) => b - a);
 // ... ваш код для сортировки по убыванию окончен
 
 console.log(arr); // 8, 5, 2, 1, -10
+// **************************************** Задача 4 ********************************************************
+console.log('task - 4');
+// У нас есть массив строк arr. Нужно получить отсортированную копию, но оставить arr неизменённым.
+
+// Создайте функцию copySorted(arr), которая будет возвращать такую копию.
+let arr4 = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr4);
+
+console.log(sorted); // CSS, HTML, JavaScript
+console.log(arr4); // HTML, JavaScript, CSS (без изменений)
+
+// решение
+function copySorted(arr) {
+    let bufferArray = arr.slice();
+    bufferArray.sort();
+    return bufferArray;
+}
+
+// **************************************** Задача 5 ********************************************************
+console.log('task - 5');
