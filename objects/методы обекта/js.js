@@ -94,7 +94,9 @@ function Accumulator(startingValue) {
 
 let accumulator = new Accumulator(1); // начальное значение 1
 
-accumulator.read(); // прибавит ввод prompt к текущему значению
-accumulator.read(); // прибавит ввод prompt к текущему значению
+// accumulator.read(); // прибавит ввод prompt к текущему значению           закомментировал чтобы не мешали
+// accumulator.read(); // прибавит ввод prompt к текущему значению     
 
-alert(accumulator.value); // выведет сумму этих значений
+// alert(accumulator.value); // выведет сумму этих значений
+
+console.log(accumulator)
