@@ -47,8 +47,30 @@ let ladder2 = {
         return this;
     },
     showStep: function () { // показывает текущую ступеньку
-        alert(this.step);
+        // alert(this.step); чтобы не мешал заменен console.log строка 54
     }
 };
 ladder2.up().up().down().showStep()// 1
 console.log(ladder2.step);
+
+// **************************************** Задача 3  ********************************************************
+// Создайте функцию - конструктор Calculator, который создаёт объекты с тремя методами:
+
+// read() запрашивает два значения при помощи prompt и сохраняет их значение в свойствах объекта.
+// sum() возвращает сумму введённых свойств.
+// mul() возвращает произведение введённых свойств.
+
+// **************************************** Задача 3 решение ********************************************************
+function Calculator2() {
+    this.read = function () { this.oneVariable = +prompt('enter 1 variable', 5); this.twoVariable = +prompt('enter 2 variable', 5) }
+    this.sum = function () { return this.oneVariable + this.twoVariable }
+    this.mul = function () { return this.oneVariable * this.twoVariable }
+}
+
+
+// let calculator2 = new Calculator2();
+// calculator2.read();
+
+// alert("Sum=" + calculator2.sum());         закомментировал чтобы не мешали
+// alert("Mul=" + calculator2.mul());
+
