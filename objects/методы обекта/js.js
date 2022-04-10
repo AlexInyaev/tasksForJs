@@ -100,3 +100,34 @@ let accumulator = new Accumulator(1); // начальное значение 1
 // alert(accumulator.value); // выведет сумму этих значений
 
 console.log(accumulator)
+
+
+// *****test
+
+let id = Symbol('id');
+
+let obj = {
+    'a': 'q'
+}
+
+obj[id] = 5;
+
+console.log(obj)
+for (key in obj) {
+    console.log(obj.key)
+}
+
+
+let newobj = Object.assign({}, obj);
+console.log(newobj);
+
+let gid = Symbol.for('gid');
+let g = Symbol.for('gid');
+console.log(g)
+obj[g] = 888;
+console.log(obj)
+let id2 = Symbol('id');
+
+obj[id2] = 2;
+console.log(obj)
+console.log(Reflect.ownKeys(obj))
