@@ -5,15 +5,32 @@
 // Также надо разрешить пользователю остановить процесс ввода, отправив пустую строку или нажав «Отмена». В этом случае функция должна вернуть null.
 
 
-function readNumber() {
-    let val = '0'
-    for (; val == '0';) {
-        val = prompt('add number', 0);
-        if (val === null || val === '') {
-            return 'null';
-        }
+// function readNumber() {
+//     let val = '0'
+//     for (; val == '0';) {
+//         val = prompt('add number', 0);
+//         if (val === null || val === '') {
+//             return 'null';
+//         }
 
-    }
-    return +val;
+//     }
+//     return +val;
+// }
+// document.querySelector('.out').textContent = readNumber();
+
+
+// **************************************** Задача 2 ********************************************************
+// Встроенный метод Math.random() возвращает случайное число от 0 (включительно) до 1 (но не включая 1)
+
+// Напишите функцию random(min, max), которая генерирует случайное число с плавающей точкой от min до max (но не включая max).
+
+function random(min, max) {
+    return min + Math.random() * (max - min);
+
 }
-document.querySelector('.out').textContent = readNumber();
+
+// Пример работы функции:
+
+alert(random(1, 5)); // 1.2345623452
+alert(random(1, 5)); // 3.7894332423
+alert(random(1, 5)); // 4.3435234525
