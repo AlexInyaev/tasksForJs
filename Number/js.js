@@ -31,6 +31,22 @@ function random(min, max) {
 
 // Пример работы функции:
 
-alert(random(1, 5)); // 1.2345623452
-alert(random(1, 5)); // 3.7894332423
-alert(random(1, 5)); // 4.3435234525
+// alert(random(1, 5)); // 1.2345623452
+// alert(random(1, 5)); // 3.7894332423
+// alert(random(1, 5)); // 4.3435234525
+
+// **************************************** Задача 2 ********************************************************
+// Напишите функцию randomInteger(min, max), которая генерирует случайное целое (integer) число от min до max (включительно).
+// Любое число из интервала min..max должно появляться с одинаковой вероятностью.
+
+function randomInteger(min, max) {
+    return Math.round(min + Math.random() * (max - min));
+
+}
+
+
+// Пример работы функции:
+
+alert(randomInteger(1, 5)); // 1
+alert(randomInteger(1, 5)); // 3
+alert(randomInteger(1, 5)); // 5
