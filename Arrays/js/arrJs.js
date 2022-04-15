@@ -96,4 +96,33 @@ let users = [vasya, petya, masha];
 let names = /* ... ваш код */users.map(item => item.name)
 
 
-alert(names); // Вася, Петя, Маша
+// alert(names); // Вася, Петя, Маша
+
+// **************************************** Задача 6 ********************************************************
+console.log('task - 6');
+
+// У вас есть массив объектов user, и у каждого из объектов есть name, surname и id.
+// Напишите код, который создаст ещё один массив объектов с параметрами id и fullName, где fullName – состоит из name и surname.
+
+
+
+let vasya6 = { name: "Вася", surname: "Пупкин", id: 1 };
+let petya6 = { name: "Петя", surname: "Иванов", id: 2 };
+let masha6 = { name: "Маша", surname: "Петрова", id: 3 };
+
+let users6 = [vasya6, petya6, masha6];
+
+let usersMapped = /* ... ваш код ... */ users6.map((item) => {
+    return { 'fullName': item.name + ' ' + item.surname, 'id': item.id }
+})
+
+/*
+usersMapped = [
+  { fullName: "Вася Пупкин", id: 1 },
+  { fullName: "Петя Иванов", id: 2 },
+  { fullName: "Маша Петрова", id: 3 }
+]
+*/
+
+alert(usersMapped[0].id) // 1
+alert(usersMapped[0].fullName) // Вася Пупкин
