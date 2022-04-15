@@ -112,9 +112,9 @@ let masha6 = { name: "Маша", surname: "Петрова", id: 3 };
 
 let users6 = [vasya6, petya6, masha6];
 
-let usersMapped = /* ... ваш код ... */ users6.map((item) => {
-    return { 'fullName': item.name + ' ' + item.surname, 'id': item.id }
-})
+let usersMapped = /* ... ваш код ... */ users6.map((item) => (
+    { 'fullName': item.name + ' ' + item.surname, 'id': item.id }
+))
 
 /*
 usersMapped = [
@@ -124,5 +124,24 @@ usersMapped = [
 ]
 */
 
-alert(usersMapped[0].id) // 1
-alert(usersMapped[0].fullName) // Вася Пупкин
+// alert(usersMapped[0].id) // 1
+// alert(usersMapped[0].fullName) // Вася Пупкин
+
+
+// **************************************** Задача 7 ********************************************************
+console.log('task - 7');
+// Напишите функцию sortByAge(users), которая принимает массив объектов со свойством age и сортирует их по нему.
+
+let vasya7 = { name: "Вася", age: 25 };
+let petya7 = { name: "Петя", age: 30 };
+let masha7 = { name: "Маша", age: 28 };
+
+let arr7 = [vasya, petya, masha];
+const sortByAge = (arr) => arr.sort((a, b) => a.age - b.age);
+
+sortByAge(arr7);
+
+// теперь: [vasya, masha, petya]
+alert(arr7[0].name); // Вася
+alert(arr7[1].name); // Маша
+alert(arr7[2].name); // Петя
