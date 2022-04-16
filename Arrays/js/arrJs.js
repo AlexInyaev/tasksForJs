@@ -142,6 +142,30 @@ const sortByAge = (arr) => arr.sort((a, b) => a.age - b.age);
 sortByAge(arr7);
 
 // теперь: [vasya, masha, petya]
-alert(arr7[0].name); // Вася
-alert(arr7[1].name); // Маша
-alert(arr7[2].name); // Петя
+// alert(arr7[0].name); // Вася
+// alert(arr7[1].name); // Маша
+// alert(arr7[2].name); // Петя
+
+
+
+// **************************************** Задача 7 ********************************************************
+console.log('task - 7');
+// Напишите функцию shuffle(array), которая перемешивает (переупорядочивает случайным образом) элементы массива.
+// Многократные прогоны через shuffle могут привести к разным последовательностям элементов. Например:
+
+let arr8 = [1, 2, 3];
+
+function shuffle(arr) {
+    arr.sort(() => (Math.floor(Math.random() * 10) > 5 ? -1 : 1)) //  Красивое решение из книги - array.sort(() => Math.random() - 0.5);
+}
+
+shuffle(arr8);
+// arr = [3, 2, 1]
+console.log(arr8)
+shuffle(arr8);
+// arr = [2, 1, 3]
+console.log(arr8)
+shuffle(arr8);
+console.log(arr8)
+// arr = [3, 1, 2]
+// ...
