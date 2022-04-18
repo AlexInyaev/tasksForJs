@@ -31,7 +31,7 @@ function aclean(arr) {
     for (let item of map.values()) {
         out.push(item)
     }
-
+    console.log(map.entries());
     return out;
 
 }
@@ -54,3 +54,18 @@ alert(aclean(arr)); // "nap,teachers,ear" или "PAN,cheaters,era"
 
 //     return Array.from(map.values());
 // }
+
+// **************************************** Задача 3 ********************************************************
+console.log('task - 3');
+
+let salaries = {
+    "John": 100,
+    "Pete": 300,
+    "Mary": 250
+};
+
+alert(sumSalaries(salaries)); // 650
+
+function sumSalaries(obj) {
+    return Object.values(obj).reduce((out, val) => out + val, 0)
+}
