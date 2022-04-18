@@ -69,3 +69,14 @@ alert(sumSalaries(salaries)); // 650
 function sumSalaries(obj) {
     return Object.values(obj).reduce((out, val) => out + val, 0)
 }
+
+let user = {
+    name: 'John',
+    age: 30
+};
+
+alert(count(user)); // 2
+
+function count(obj) {
+    return Object.keys(obj).length
+}
