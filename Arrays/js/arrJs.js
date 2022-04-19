@@ -190,4 +190,14 @@ let masha9 = { name: "Маша", age: 29 };
 
 let arr9 = [vasya9, petya9, masha9];
 
-alert(getAverageAge(arr9)); // (25 + 30 + 29) / 3 = 28
+// alert(getAverageAge(arr9)); // (25 + 30 + 29) / 3 = 28
+
+// **************************************** Задача 10 ********************************************************
+console.log('task - 10');
+
+// Создайте массив с элементами массив с элементами 'a', 'b', 'c', 'd'. Выведите с его помощью на экран строку 'a+b+c+d'.
+function task10() {
+    let arr = [a, b, c, d] = 'a+b+c+d'.split('+');
+    return arr;
+}
+console.log(task10())
