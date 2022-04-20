@@ -51,6 +51,7 @@ function task_2() {
         return dayWeek;
     }
 
+    // вариант из учебника
     function getWeekDay2(date) {
         let days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
 
