@@ -1,7 +1,8 @@
 
 // task_1();
 // task_2()
-task_3()
+// task_3();
+task_4();
 
 function task_1() {
     // Создайте объект Date для даты: 20 февраля 2012 года, 3 часа 12 минут.Временная зона – местная.
@@ -78,4 +79,46 @@ function task_3() {
     function getDateAgo(date, dayAgo) {
         return new Date(date - (dayAgo * 24 * 3600 * 1000)).getDate();
     }
+}
+
+function task_4() {
+    // Напишите функцию getLastDayOfMonth(year, month), возвращающую последнее число месяца. Иногда это 30, 31 или даже февральские 28/29.
+    // Параметры:
+    // year – год из четырёх цифр, например, 2012.
+    // month – месяц от 0 до 11.
+    // К примеру, getLastDayOfMonth(2012, 1) = 29 (високосный год, февраль).
+
+    function getLastDayOfMonth(year, month) {
+        let date = new Date(year, month);
+        let dateCount = new Date(year, month);
+        let i = 1;
+
+        while (date.getMonth() == dateCount.getMonth()) { //проверяем чтобы месяцы выли одинаковые как только месяц перескочит то пора выводить i-2
+
+            dateCount.setDate(i);
+            i++;
+        }
+        return i - 2;
+    }
+    console.log(getLastDayOfMonth(2012, 1, 30));
+
+    //решение из учебника 
+
+    // Создадим дату из следующего месяца, но в день передадим 0:
+
+    // function getLastDayOfMonth(year, month) {
+    //     let date = new Date(year, month + 1, 0);
+    //     return date.getDate();
+    // }
+
+    // alert(getLastDayOfMonth(2012, 0)); // 31
+    // alert(getLastDayOfMonth(2012, 1)); // 29
+    // alert(getLastDayOfMonth(2013, 1)); // 28
+
+
+    // Обычно даты начинаются с 1,
+    //         но технически возможно передать любое число,
+    //             и дата сама себя поправит.Так что если передать 0,
+    //                 то это значение будет соответствовать «один день перед первым числом месяца»,
+    //    другими словами: «последнее число прошлого месяца».
 }
