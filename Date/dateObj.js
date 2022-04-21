@@ -135,7 +135,8 @@ function task_5() {
     }
     console.log(getSecondsToday())
 
-    //  
+    //  решение из учебника
+
     // function getSecondsToday() {
     //     let now = new Date();
 
