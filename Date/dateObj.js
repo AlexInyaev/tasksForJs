@@ -131,7 +131,7 @@ function task_5() {
     function getSecondsToday() {
         let startTime = new Date();
 
-        return (Math.trunc((startTime.setHours(0, 0, 0) - Date.now()) / 1000)) * -1;
+        return Math.trunc((Date.now() - startTime.setHours(0, 0, 0)) / 1000);
     }
     console.log(getSecondsToday())
 
