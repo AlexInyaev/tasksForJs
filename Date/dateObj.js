@@ -2,7 +2,8 @@
 // task_1();
 // task_2()
 // task_3();
-task_4();
+// task_4();
+task_5();
 
 function task_1() {
     // Создайте объект Date для даты: 20 февраля 2012 года, 3 часа 12 минут.Временная зона – местная.
@@ -121,4 +122,31 @@ function task_4() {
     //             и дата сама себя поправит.Так что если передать 0,
     //                 то это значение будет соответствовать «один день перед первым числом месяца»,
     //    другими словами: «последнее число прошлого месяца».
+}
+
+function task_5() {
+    // Напишите функцию getSecondsToday(), возвращающую количество секунд с начала сегодняшнего дня.
+    // Например, если сейчас 10:00, и не было перехода на зимнее/летнее время, то:
+
+    function getSecondsToday() {
+        let startTime = new Date();
+
+        return (Math.trunc((startTime.setHours(0, 0, 0) - Date.now()) / 1000)) * -1;
+    }
+    console.log(getSecondsToday())
+
+    //  
+    // function getSecondsToday() {
+    //     let now = new Date();
+
+    //     // создаём объект с текущими днём/месяцем/годом
+    //     let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    //     let diff = now - today; // разница в миллисекундах
+    //     return Math.round(diff / 1000); // получаем секунды
+    //   }
+
+    //   alert( getSecondsToday() );
+
+
 }
