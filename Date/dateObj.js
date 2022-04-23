@@ -151,6 +151,7 @@ function task_5() {
     //   alert( getSecondsToday() );
 
 
+
 }
 function task_6() {
     // Создайте функцию getSecondsToTomorrow(), возвращающую количество секунд до завтрашней даты.
