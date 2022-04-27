@@ -31,6 +31,13 @@ function task_1() {
             return a + sumToRec(a - 1);
         }
     }
-    console.log(sumToRec(100))
+    console.log(sumToRec(100));
 
+    function sumToMath(n) {
+        // Sn = (a1 + an)/2*n;
+        // a = 1;
+        let sn = (1 + 1 * n) / 2 * n;
+        return sn;
+    }
+    console.log(sumToMath(100));
 }
