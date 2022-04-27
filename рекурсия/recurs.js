@@ -1,4 +1,5 @@
 task_1();
+task_2();
 function task_1() {
     // Напишите функцию sumTo(n), которая вычисляет сумму чисел 1 + 2 + ... + n.
     // Например:
@@ -35,9 +36,31 @@ function task_1() {
 
     function sumToMath(n) {
         // Sn = (a1 + an)/2*n;
+        // n * (n + 1) / 2;   из learn js
         // a = 1;
         let sn = (1 + 1 * n) / 2 * n;
         return sn;
     }
     console.log(sumToMath(100));
+}
+
+function task_2() {
+    // Задача – написать функцию factorial(n), которая возвращает n!, используя рекурсию.
+    // 1! = 1
+    // 2! = 2 * 1 = 2
+    // 3! = 3 * 2 * 1 = 6
+    // 4! = 4 * 3 * 2 * 1 = 24
+    // 5! = 5 * 4 * 3 * 2 * 1 = 120
+
+    function factorial(n) {
+        if (n == 1) {
+            return n;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+
+    console.log(factorial(4))
+
+
 }
