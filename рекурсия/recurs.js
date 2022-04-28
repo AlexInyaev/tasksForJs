@@ -1,5 +1,6 @@
 task_1();
 task_2();
+task_3()
 function task_1() {
     // Напишите функцию sumTo(n), которая вычисляет сумму чисел 1 + 2 + ... + n.
     // Например:
@@ -63,4 +64,24 @@ function task_2() {
     console.log(factorial(4))
 
 
+}
+
+function task_3() {
+    function fib(n) {
+        /* ваш код */
+        // return n <= 1 ? n : fib(n - 1) + fib(n - 2); //через рекурсию медленно
+        let a = 1;
+        let b = 1;
+        for (let i = 3; i <= n; i++) {
+            let c = a + b;
+            a = b;
+            b = c;
+        }
+        return b;
+
+    }
+
+    alert(fib(3)); // 2
+    alert(fib(7)); // 13
+    alert(fib(77)); // 5527939700884757
 }
