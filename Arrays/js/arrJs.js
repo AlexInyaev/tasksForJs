@@ -10,6 +10,7 @@ console.log(task_());
 
 
 
+
 function camelizeMyVersion() {
     let str = document.querySelector('#taskArr1').value; //получаю строку из поля
     let arr = str.split(''); //разбиваю строку в массив по буквам
