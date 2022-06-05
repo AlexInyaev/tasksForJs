@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Напишите функцию printNumbers(from, to), которая выводит число каждую секунду, начиная от from и заканчивая to.
+
+        {
+
+            // function printNumbers(from, to) {
+            //     let start = from;
+
+            //     function tr(to) {
+            //         if (start >= to) {
+            //             console.log(start--)
+            //         } else {
+            //             clearInterval(timerId)
+            //         }
+            //     }
+            //     let timerId = setInterval(tr, 1000, to)
+            // }
+
+            // printNumbers(10, 1)
+
+
+        }
+
+        {
+            function printNumbers(from, to) {
+                let start = from;
+
+                let timerId = setTimeout(function tr() {
+                    if (start >= to) {
+                        console.log(start--)
+                    } else {
+                        clearInterval(timerId)
+                    }
+                    timerId = setTimeout(tr, 1000)
+
+                }, 1000)
+            }
+
+            printNumbers(10, 1)
+        }
+
+
+    </script>
+</body>
+
+</html>
